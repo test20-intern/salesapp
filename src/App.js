@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import PolicyInquiry from "./components/PolicyInquiry";
@@ -8,9 +9,34 @@ import OverDuePolicies from "./components/OverDuePolicies";
 
 
 
+import React, { useState } from "react";
+import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#7c0414'
+    },
+    secondary: {
+      main: '#0C6D71'
+    },
+    info: {
+      main: '#042A2C'
+    },
+    success: {
+      main: '#108F94'
+    }
+
+  }
+})
 function App() {
   return (
     <div>
+     <ThemeProvider theme={theme}>
+
       <BrowserRouter>
         <Routes>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
@@ -21,8 +47,9 @@ function App() {
           <Route path="/collectionreport" element={<CollectionReport/>}></Route>
         </Routes>
       </BrowserRouter>
+      </ThemeProvider>
+
     </div>
   );
 }
-
 export default App;
