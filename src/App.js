@@ -2,7 +2,11 @@
 function App() {
   return (
     <div>
-    <h1>Sales Prasadi</h1>
+
+    <h1>Sales details</h1>
+
+ 
+
     </div>
   );
 }
