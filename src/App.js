@@ -2,7 +2,7 @@
 function App() {
   return (
     <div>
-    <h1>Hello Ceylinco</h1>
+    <h1>Hello Sales App</h1>
     </div>
   );
 }
