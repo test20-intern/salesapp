@@ -10,21 +10,21 @@ import OverDuePolicies from "./components/OverDuePolicies";
 
 
 import React, { useState } from "react";
-import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Login from'./pages/Login/Login';
 
 
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#7c0414'
+      main: '#7c0414' //dark red
     },
     secondary: {
-      main: '#0C6D71'
+      main: '#d9d9d9' // ash color
     },
     info: {
-      main: '#042A2C'
+      main: '#042A2C' 
     },
     success: {
       main: '#108F94'
@@ -35,21 +35,29 @@ const theme = createTheme({
 function App() {
   return (
     <div>
-     <ThemeProvider theme={theme}>
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard/>}></Route>
-          <Route path="/policyinquiry" element={<PolicyInquiry/>}></Route>
-          <Route path="/lapsedpolicies" element={<LapsedPolicies/>}></Route>
-          <Route path="/overduepolicies" element={<OverDuePolicies/>}></Route>
-          <Route path="/duepolicies" element={<DuePolicies/>}></Route>
-          <Route path="/collectionreport" element={<CollectionReport/>}></Route>
-        </Routes>
-      </BrowserRouter>
-      </ThemeProvider>
+       <ThemeProvider theme={theme}>
+        <Login></Login>
+ </ThemeProvider>
 
     </div>
+       
+      
+
+//      <ThemeProvider theme={theme}>
+
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/dashboard" element={<Dashboard/>}></Route>
+//           <Route path="/policyinquiry" element={<PolicyInquiry/>}></Route>
+//           <Route path="/lapsedpolicies" element={<LapsedPolicies/>}></Route>
+//           <Route path="/overduepolicies" element={<OverDuePolicies/>}></Route>
+//           <Route path="/duepolicies" element={<DuePolicies/>}></Route>
+//           <Route path="/collectionreport" element={<CollectionReport/>}></Route>
+//         </Routes>
+//       </BrowserRouter>
+
+     
   );
 }
 export default App;
