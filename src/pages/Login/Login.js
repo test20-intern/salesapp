@@ -33,18 +33,19 @@ import { useNavigate } from 'react-router-dom';
         <div className={Styles.Page}>
              <Paper elevation={3} className={Styles.LoginPaper} >
              <Box sx={{display: 'flex',flexWrap: 'wrap',}}>
+               <Box className={Styles.imageBox}>
                 <img src={Login_Image} style={{ width: '300px', height: '300px' }}/>
+                </Box>
+                <Box className={Styles.formBox}>
                 <div className={Styles.FormWithTitle}>
-            
-                < Typography className={Styles.title} style={{marginLeft:"2%"}} variant="h5" gutterBottom>Ceylinco Life - Sales App</Typography>
+                < Typography className={Styles.title}  variant="h5" gutterBottom>Ceylinco Life - Sales App</Typography>
                 <div className={Styles.form}>
                 <div className={Styles.UserInputs}><TextField id="outlined-basic" label="Username" variant="outlined" value={username}  onChange={(e) => setUsername(e.target.value)}/></div>
                 <div className={Styles.UserInputs}><TextField id="outlined-basic" label="Password" variant="outlined"  type='password'  value={password}  onChange={(e) => setPassword(e.target.value)}/></div>
                 <Button variant="contained" style={{marginTop:"5%",width:"75%" }} onClick={handleLogin}> Login</Button>
                 </div>
-              
-
-                </div>  
+                </div> 
+                </Box> 
             </Box>
             </Paper>
 
