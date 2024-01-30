@@ -36,27 +36,28 @@ function App() {
   return (
     <div>
 
-       <ThemeProvider theme={theme}>
-        <Login></Login>
- </ThemeProvider>
+       
 
-    </div>
+
+   
        
       
 
-//      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
 
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/dashboard" element={<Dashboard/>}></Route>
-//           <Route path="/policyinquiry" element={<PolicyInquiry/>}></Route>
-//           <Route path="/lapsedpolicies" element={<LapsedPolicies/>}></Route>
-//           <Route path="/overduepolicies" element={<OverDuePolicies/>}></Route>
-//           <Route path="/duepolicies" element={<DuePolicies/>}></Route>
-//           <Route path="/collectionreport" element={<CollectionReport/>}></Route>
-//         </Routes>
-//       </BrowserRouter>
-
+       <BrowserRouter>
+         <Routes>
+         <Route path='/' exact element={<Login/> } />
+           <Route path="/dashboard" element={<Dashboard/>}></Route>
+          <Route path="/policyinquiry" element={<PolicyInquiry/>}></Route>
+          <Route path="/lapsedpolicies" element={<LapsedPolicies/>}></Route>
+          <Route path="/overduepolicies" element={<OverDuePolicies/>}></Route>
+           <Route path="/duepolicies" element={<DuePolicies/>}></Route>
+          <Route path="/collectionreport" element={<CollectionReport/>}></Route>
+         </Routes>
+      </BrowserRouter>
+</ThemeProvider>
+</div>
      
   );
 }

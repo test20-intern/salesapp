@@ -1,17 +1,26 @@
+body {
+    overflow: hidden; 
+    margin: 0;
+  }
+
 .LoginPaper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
     display: flex;
-    margin: 5%;
+    flex-direction: column;
     padding: 5%;
-    width: fit-content;
-    align-self: center;
-    justify-content: center;
-   
+    max-width: 600px;
+    width: 85%; 
+    
 }
 
 .Page{
-    display:flex;
+    display: flex;
     justify-content: center;
-    
+    align-items: center;  
+    min-height: 100vh; 
 }
 
 .title{
@@ -33,5 +42,15 @@
     width: 75%;
 }
 
-
+@media (min-width: 600px) {
+    .LoginPaper {
+      width: 80%; /* Adjust the width for screens wider than 600px (tablet) */
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .LoginPaper {
+      width: 60%; /* Adjust the width for screens wider than 900px (desktop) */
+    }
+  }
 
