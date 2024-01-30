@@ -5,7 +5,7 @@ import LapsedPolicies from "./components/LapsedPolicies";
 import DuePolicies from "./components/DuePolicies";
 import CollectionReport from "./components/CollectionReport";
 import OverDuePolicies from "./components/OverDuePolicies";
-import Login from "./pages/Dashboard";
+
 
 
 import React, { useState } from "react";
