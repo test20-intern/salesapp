@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import PolicyInquiry from "./components/PolicyInquiry";
@@ -6,7 +5,7 @@ import LapsedPolicies from "./components/LapsedPolicies";
 import DuePolicies from "./components/DuePolicies";
 import CollectionReport from "./components/CollectionReport";
 import OverDuePolicies from "./components/OverDuePolicies";
-
+import Login from "./pages/Dashboard";
 
 
 import React, { useState } from "react";
@@ -34,14 +33,7 @@ const theme = createTheme({
 })
 function App() {
   return (
-    <div>
-
-       
-
-
-   
-       
-      
+    <div> 
 
       <ThemeProvider theme={theme}>
 
@@ -49,6 +41,7 @@ function App() {
          <Routes>
          <Route path='/' exact element={<Login/> } />
            <Route path="/dashboard" element={<Dashboard/>}></Route>
+
           <Route path="/policyinquiry" element={<PolicyInquiry/>}></Route>
           <Route path="/lapsedpolicies" element={<LapsedPolicies/>}></Route>
           <Route path="/overduepolicies" element={<OverDuePolicies/>}></Route>
