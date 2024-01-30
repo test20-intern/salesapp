@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 
 import logo2 from "../images/logo2.jpg";
 import { Avatar } from "@mui/material";
+import Logout from "./Logout";
 
 const drawerWidth = 240;
 
@@ -72,13 +73,19 @@ function ResponsiveDrawer(props) {
           variant="h6"
           noWrap
           component="div"
-          sx={{ color: "white", marginLeft: 2, marginTop: 2 , display: { xs: "none", sm: "block" }}}
+          sx={{
+            color: "white",
+            marginLeft: 2,
+            marginTop: 2,
+            display: { xs: "none", sm: "block" },
+          }}
         >
           Sales App
         </Typography>
+
         <Toolbar />
       </Box>
-      
+
       <List sx={{ color: "white" }}>
         {[
           "Dashboard",
@@ -107,6 +114,9 @@ function ResponsiveDrawer(props) {
           </ListItem>
         ))}
       </List>
+      <Box>
+        <Logout />
+      </Box>
     </div>
   );
 
@@ -137,6 +147,7 @@ function ResponsiveDrawer(props) {
           </IconButton>
         </Toolbar>
       </AppBar>
+
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -161,27 +172,32 @@ function ResponsiveDrawer(props) {
             },
           }}
         >
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Avatar
-          alt="ceylinco logo 2"
-          src={logo2}
-          sx={{
-            width: 45,
-            height: 45,
-            marginLeft: 4,
-            marginTop: 2,
-            display: { xs: "block", sm: "none" },
-          }}
-        />
-        <Typography
-          variant="h6"
-          noWrap
-          component="div"
-          sx={{ color: "white", marginLeft: 2, marginTop: 2 , display: { xs: "block", sm: "none" }}}
-        >
-          Sales App
-        </Typography>
-      </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Avatar
+              alt="ceylinco logo 2"
+              src={logo2}
+              sx={{
+                width: 45,
+                height: 45,
+                marginLeft: 4,
+                marginTop: 2,
+                display: { xs: "block", sm: "none" },
+              }}
+            />
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                color: "white",
+                marginLeft: 2,
+                marginTop: 2,
+                display: { xs: "block", sm: "none" },
+              }}
+            >
+              Sales App
+            </Typography>
+          </Box>
           {drawer}
         </Drawer>
         <Drawer
