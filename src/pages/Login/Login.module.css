@@ -1,71 +1,66 @@
 body {
-    overflow: hidden; 
-    margin: 0;
+    overflow: hidden;
+    background-color:bisque;
+  
+ 
+
   }
 
 .LoginPaper{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    max-width: 600px;
-    width: 85%; 
-    justify-content: center;
-    align-items: center;
-    
-}
+  position: relative;
+  width: 80%;
 
+   
+}
 .Page{
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+ 
+
+ 
+}
+.centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
 }
 
-.title{
-    
-    
-    justify-content: center;
-}
-
-.form{
-    margin-left:15%;
-    justify-content: center;
-    align-items: center;
-}
 
 .UserInputs{
+  display: flex;
     margin-top: 4%;
     display: flex;
     justify-content: center;
-    width: 75%;
+    align-items: center;
+   
 }
-
 @media (min-width: 600px) {
     .LoginPaper {
-      width: 80%; /* Adjust the width for screens wider than 600px (tablet) */
+      width: 80%; 
     }
   }
   
   @media (min-width: 900px) {
     .LoginPaper {
-      width: 60%; /* Adjust the width for screens wider than 900px (desktop) */
+      width: 60%; 
     }
   }
 
   .imageBox{
-    display: flex;
-    justify-content: center;
+    display:flex;
+    justify-content:center;
     align-items: center;
+    padding: 3%;
   }
 
   .formBox{
-    display: flex;
+    display:flex;
     justify-content: center;
-  
     align-items: center;
+  
   }
 
