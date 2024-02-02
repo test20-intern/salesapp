@@ -1,7 +1,7 @@
 import React from "react";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import swal from "sweetalert";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -17,7 +17,8 @@ function Logout() {
         // Perform logout logic here
         console.log("Logging out...");
         // For now, redirect to the login page
-        window.location.href = "/login";
+        window.location.href = "/";
+        
       } else {
         console.log("Cancelled logout.");
       }
