@@ -1,58 +1,76 @@
 import React from "react";
 import ResponsiveDrawer from "./ResponsiveDrawer";
-import PropTypes from 'prop-types';
-import { Box, Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import { Box, CssBaseline, TextField, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 
 const drawerWidth = 240;
 
 function PolicyInquiry() {
-    return (
-        <div>
-        <ResponsiveDrawer/>
-        <Box sx={{ display: "flex" }}>
+  return (
+    <div>
+      <ResponsiveDrawer />
+      <Box sx={{ display: "flex" }}>
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
+        >
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        </Box>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+          }}
+        >
           <Box
-            component="nav"
-            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-            aria-label="mailbox folders"
-          >
-            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-          
-          </Box>
-          <Box
-            component="main"
             sx={{
-              flexGrow: 1,
-              p: 3,
-              width: { sm: `calc(100% - ${drawerWidth}px)` },
+              border: 1,
+              borderRadius: 2,
+              backgroundColor: "#7c0414",
+              height: 40,
             }}
           >
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-              dolor purus non enim praesent elementum facilisis leo vel. Risus at
-              ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-              quisque non tellus. Convallis convallis tellus id interdum velit
-              laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-              adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-              integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-              eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-              quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-              vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-              lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-              faucibus et molestie ac.
+            <Typography
+              sx={{
+                color: "white",
+                marginLeft: 5,
+                marginTop: 1,
+                paddingBottom: 3,
+              }}
+            >
+              Search Policy
             </Typography>
           </Box>
+          <Box sx={{ paddingTop: 3 }}>
+            <React.Fragment>
+              <CssBaseline />
+              <Container>
+                <Box sx={{ bgcolor: "#d9d9d9", height: "65vh" }}>
+                <TextField id="outlined-search" label="Search field" type="search" />
+                <TextField id="outlined-search" label="Search field" type="search" />
+                <TextField id="outlined-search" label="Search field" type="search" />
+                <TextField id="outlined-search" label="Search field" type="search" />
+                <TextField id="outlined-search" label="Search field" type="search" />
+                </Box>
+              </Container>
+            </React.Fragment>
+          </Box>
         </Box>
-        </div>
-      );
-    }
-    
-    ResponsiveDrawer.propTypes = {
-      /**
-       * Injected by the documentation to work in an iframe.
-       * Remove this when copying and pasting into your project.
-       */
-      window: PropTypes.func,
-    };
+      </Box>
+    </div>
+  );
+}
+
+ResponsiveDrawer.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * Remove this when copying and pasting into your project.
+   */
+  window: PropTypes.func,
+};
 
 export default PolicyInquiry;
